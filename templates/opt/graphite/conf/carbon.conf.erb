@@ -216,11 +216,11 @@ AMQP_METRIC_NAME_IN_BODY = <%= scope.lookupvar('graphite::gr_amqp_metric_name_in
 # URL of graphite-web instance, this is used to add incoming series to the tag database
 # GRAPHITE_URL = http://127.0.0.1:80
 #GRAPHITE_URL = https://graphite-ingest.svc.support.mmem.co
-GRAPHITE_URL = <%= scope.lookupvar('graphite:gr_url') %>
+GRAPHITE_URL = <%= scope.lookupvar('graphite::gr_url') %>
 
 # Tag support, when enabled carbon will make HTTP calls to graphite-web to update the tag index
 #ENABLE_TAGS = True
-ENABLE_TAGS = <%= scope.lookupvar(' graphite:gr_tags') %>
+ENABLE_TAGS = <%= scope.lookupvar(' graphite::gr_tags') %>
 
 # Tag update interval, this specifies how frequently updates to existing series will trigger
 # an update to the tag index, the default setting is once every 100 updates
