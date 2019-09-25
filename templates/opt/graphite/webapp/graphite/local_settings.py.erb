@@ -349,6 +349,30 @@ USE_REMOTE_USER_AUTHENTICATION = False
 end
 -%>
 
+#####################################
+# TagDB Settings #
+#####################################
+# Tag Database
+TAGDB = 'graphite.tags.localdatabase.LocalDatabaseTagDB'
+
+# Time to cache seriesByTag results
+TAGDB_CACHE_DURATION = 60
+
+# Autocomplete default result limi
+TAGDB_AUTOCOMPLETE_LIMIT = 100
+
+# Settings for Redis TagDB
+#TAGDB_REDIS_HOST = 'localhost'
+#TAGDB_REDIS_PORT = 6379
+#TAGDB_REDIS_DB = 0
+
+# Settings for HTTP TagDB
+#TAGDB_HTTP_URL = ''
+#TAGDB_HTTP_USER = ''
+#TAGDB_HTTP_PASSWORD = ''
+# Does the remote TagDB support autocomplete?
+#TAGDB_HTTP_AUTOCOMPLETE = False
+
 <% unless scope.lookupvar('graphite::gr_django_1_4_or_less') %>
 # Configure static URL prefix for Django admin pages
 STATIC_URL = '/static/'
