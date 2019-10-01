@@ -543,8 +543,8 @@
 #}
 #
 class graphite (
-  $gr_url                                 = '',
-  $gr_tags                                = '',
+  $gr_url                                 = 'localhost',
+  $gr_tags                                = 'False',
   $gr_group                               = '',
   $gr_user                                = '',
   $gr_service_provider                    = $::graphite::params::service_provider,
